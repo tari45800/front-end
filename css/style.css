@@ -3,4 +3,112 @@
   padding: 0;
 }
 
+
+/* ================================================== */
 /* Ex01_Loading */
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading1 span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #aaa;
+  border-radius: 35%;
+  animation: loading1 1s linear infinite;
+}
+
+.loading1 span:nth-child(1){
+  animation-delay: 0s;
+  background-color: crimson;
+}
+.loading1 span:nth-child(2){
+  animation-delay: 0.2s;
+  background-color: dodgerblue;
+}
+.loading1 span:nth-child(3){
+  animation-delay: 0.4s;
+  background-color: greenyellow;
+}
+
+@keyframes loading1 {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+
+/* ================================================== */
+/* Ex02_Loading */
+
+
+.loading2{
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.loading2 span{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #aaa;
+  top: 0;
+  left: 0;
+  animation: loading2 2s infinite;
+  background-color: crimson;
+
+}
+
+.loading2 span:nth-child(1){
+  
+}
+
+.loading2 span:nth-child(2){
+  animation-delay: 1s;
+}
+
+@keyframes loading2 {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    top: 0;
+    
+    /* 자신의 크기를 제외한 거리 이동 */
+    left: calc(100% - 10px);
+    background-color: dodgerblue;
+  }
+
+  50% {
+    top: calc(100% - 10px);
+    left: calc(100% - 10px);
+    background-color: orange;
+  }
+
+  75% {
+    top: calc(100% - 10px);
+    left: 0;
+    background-color: yellowgreen;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
