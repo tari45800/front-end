@@ -73,6 +73,7 @@
 
 }
 
+
 .loading2 span:nth-child(1){
   
 }
@@ -112,3 +113,225 @@
     left: 0;
   }
 }
+
+
+/* ================================================== */
+/* Ex03_radius.html */
+
+
+.container3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #333;
+}
+
+.square {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 40px;
+}
+
+.square span{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+
+  /* border-radius의 중첩적용 */
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60% ;
+  transition: 0.5s;
+}
+
+.square:nth-child(1):hover span {
+  background-color: crimson;
+  border: none;
+}
+.square:nth-child(2):hover span {
+  background-color: dodgerblue;
+  border: none;
+}
+.square:nth-child(3):hover span {
+  background-color: yellowgreen;
+  border: none;
+}
+
+.square:hover span:nth-child(1){
+  opacity: 0.2;
+
+}
+.square:hover span:nth-child(2){
+  opacity: 0.4;
+
+}
+.square:hover span:nth-child(3){
+  opacity: 0.6;
+
+}
+
+.square span:nth-child(1){
+  animation: circle 6s linear infinite;
+}
+.square span:nth-child(2){
+  animation: circle 4s linear infinite;
+  /* 반대로 동작 */
+  animation-direction: reverse;
+}
+.square span:nth-child(3){
+  animation: circle 10s linear infinite;
+}
+
+.square div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 디브가 포지션 속성을 가지면 인라인 블럭이 된다. 그래서 크기 조절이 필요하다. ?? */
+  width: 70%;
+  text-align: center;
+  color: #fff;
+}
+
+.square p{
+  margin: 20px 0px;
+}
+
+.square div a {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60% ;
+  padding: 10px;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ================================================== */
+/* Ex04_dropdown.html */
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.dropdown{
+  margin: 50px;
+
+  /* 블록요소의 크기를 맞춰주는 작업 */
+  /* 컨텐츠의 크기만큼 자리를 차지하기 때문에 신경쓰지 않아도 됩니다. */
+  /* display: inline-block;  */
+  width: 200px;
+
+}
+
+/* 버튼이나 텍스트는 hight로 조절하는 것 보다 padding으로 조절하는게 좋다. */
+.dropdown-btn{
+
+  /* 부모의 넓이 값을 상속받아서 사용하기 때문에 크기를 신경쓰지 않아도 됩니다. */
+  width: inherit;
+  /* width: 200px; */
+  
+  padding:10px;
+  color: #fff;
+  background-color: yellowgreen;
+  font-size: 20px;
+  cursor: pointer;
+ 
+  /* 버튼 음영 없애기 */
+  border: none;
+  outline: none;
+}
+
+.dropdown-submenu{
+  display: none;
+  width: inherit;
+  /* width: 200px; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.215);
+
+}
+
+.dropdown-submenu a{
+  display: block;
+  padding: 7px;
+  text-align: center;
+}
+
+.dropdown-submenu a:hover{
+  background-color: #eee;
+}
+
+/* 호버 다음에 오는 것은 반드시 자식요소여야 한다. */
+.dropdown:hover .dropdown-submenu{
+  display: block;
+}
+
+
+/* ================================================== */
+/* Ex04_dropdown.html */
+
+.items{
+  text-align: center;
+}
+
+.item{
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #000;
+  margin: 10px;
+}
+
+img{
+  width: 300px;
+  height: 300px;
+}
+
+.caption{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  color: #fff;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.caption p{
+  display: block;
+  margin: 10px;
+}
+
+.caption a{
+  display: inline-block;
+  margin: 10px;
+  color:#fff;
+  background-color: teal;
+  padding: 7px 12px;
+  border-radius: 3px;
+}
+
+.caption a:hover{
+  background-color: #fff;
+  color:#000
+}
+
+.item:hover .caption{
+  opacity: 1;
+}
+
+/* ================================================== */
+/* Ex04_dropdown.html */
