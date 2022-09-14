@@ -3,6 +3,25 @@
   padding: 0;
 }
 
+    /* Google Web Font */
+    @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+    
+    /* Fontawesome 4.7 */
+    @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #222;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
 
 /* ================================================== */
 /* Ex01_Loading */
@@ -276,7 +295,7 @@ a {
 
 
 /* ================================================== */
-/* Ex04_dropdown.html */
+/* Ex05_mouseover.html */
 
 .items{
   text-align: center;
@@ -291,7 +310,7 @@ a {
   margin: 10px;
 }
 
-img{
+.item img{
   width: 300px;
   height: 300px;
 }
@@ -334,4 +353,256 @@ img{
 }
 
 /* ================================================== */
-/* Ex04_dropdown.html */
+/* Ex06_mouseover.html */
+
+.container6{
+
+  /* 옆으로 모든 영역을 차지 */
+  display: flex;
+
+  /* 수평 중앙 */
+  justify-content: center;
+
+  /* 수직 중앙 */
+  align-items: center;
+
+  /* 높이값 */
+  height: 100vh;
+}
+
+.icon {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+}
+
+.icon span {
+  font-size: 30px;
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  width: 500px;
+  top: -150px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.icon span::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  transform: rotate(45deg) translateX(-50%);
+  bottom: -20px;
+  left: 50%;
+}
+
+.icon:hover span {
+  opacity: 1;
+}
+
+
+/* ================================================== */
+/* Ex07_mouseover.html */
+
+.gnb {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50px;
+}
+
+.gnb a{
+  display: block;
+  font-size: 40px;
+  margin: 30px 0;
+  color: #fff;
+  transition: 0.5s;
+
+}
+
+.gnb:hover a {
+  opacity: 0.3;
+}
+
+.gnb a:hover {
+  opacity: 1;
+}
+
+.gnb a:before{
+  content: '\f105';
+  font-family: fontawesome;
+  margin-right: 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.gnb a:hover:before{
+  opacity: 1;
+}
+
+
+/* ================================================== */
+/* Ex08_mouseover.html */
+
+
+.items8 {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.item8 {
+  display: inline-block;
+  width: 300px;
+  height: 220px;
+  position: relative;
+  margin: 10px;
+}
+
+.fornt, .back{
+  position: absolute;
+  transition: 0.5s;
+  /* 트렌지션을 위한 기준 점 */
+  top: 0;
+}
+
+.fornt{
+  background-color: #333;
+  height: inherit;
+  width: 100%;
+  z-index: 1;
+}
+
+.fornt img{
+  width: 150px;
+  height: 150px;
+  padding: 7px;
+}
+
+.back {
+  background-color: #fff;
+  color: #000;
+  height: inherit;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.back a{
+  background-color: yellowgreen;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.back a:hover{
+  background-color: #000;
+
+}
+
+.item8:hover .fornt {
+  top: -50%;
+}
+
+.item8:hover .back {
+  top: 50%;
+}
+
+.item8:hover .fornt img{
+  animation: ani8 1s linear infinite;
+}
+
+
+@keyframes ani8 {
+  0%{
+  }
+
+  50%{
+    transform: scale(1.2);
+  }
+
+  100%{
+  }
+}
+
+
+/* ================================================== */
+/* Ex09_mouseover.html */
+
+
+.container9 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.app-ui {
+  width: 340px;
+  height: 640px;
+  transform: rotate(-30deg) skew(20deg);
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  background-color: #eee;
+  
+}
+
+.app-ui:hover {
+  box-shadow: -50px 100px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* 커스텀 */
+
+.app-img {
+  position: absolute;
+  transition: 0.5s;
+}
+
+/* .app-ui img {
+  position: absolute;
+  transition: 0.5s;
+} */
+
+.app-ui img {
+  margin: 0px 0px 60px 0px;
+}
+
+.app-ui img:nth-child(5){
+  visibility: hidden;
+}
+
+.app-ui:hover img:nth-child(1) {
+  transform: translate(40px, -40px);
+  opacity: 0.2;
+}
+.app-ui:hover img:nth-child(2) {
+  transform: translate(80px, -80px);
+  opacity: 0.4;
+}
+.app-ui:hover img:nth-child(3) {
+  transform: translate(120px, -120px);
+  opacity: 0.6;
+}
+.app-ui:hover img:nth-child(4) {
+  transform: translate(160px, -160px);
+
+}
+
+
+/* ================================================== */
+/* Ex10_beforeAfter.html */
+
+
