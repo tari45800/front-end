@@ -504,3 +504,340 @@ input[id=trigger17]:checked + label[for=trigger17] span:nth-child(3){
   top: 50%;
   transform: rotate(-45deg);
 }
+
+
+/* ================================================== */
+/* Ex18_sideBar.html */
+
+.container18{
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+}
+
+input[id=trigger18] {
+  display: none;
+}
+
+label[for=trigger18] {
+  width: 30px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+
+label[for=trigger18] span{
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  transition: 00.5s;
+}
+
+label[for=trigger18] span:nth-child(1){
+  top: 0;
+}
+
+label[for=trigger18] span:nth-child(2){
+  top: 50%
+}
+
+label[for=trigger18] span:nth-child(3){
+  top: 100%;
+}
+
+
+input[id=trigger18]:checked + label[for=trigger18] span:nth-child(1){
+  top: 50%;
+  transform: rotate(45deg);
+}
+input[id=trigger18]:checked + label[for=trigger18] span:nth-child(2){
+  opacity: 0;
+}
+input[id=trigger18]:checked + label[for=trigger18] span:nth-child(3){
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.sidebar18{
+  background-color: #000;
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  right: -300px;
+  transition: 0.5s;
+}
+
+input[id=trigger18]:checked ~ .sidebar18{
+  right: 0;
+}
+
+input[id=trigger18]:checked ~ label[for=trigger18]{
+  right: 310px;
+}
+
+
+/* ================================================== */
+/* Ex19_banner.html */
+
+.tab-inner19{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
+}
+
+input[name=tabmenu]{
+  display: none;
+}
+
+.content19{
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  left: -50px;
+  opacity: 0;
+  transition: 0.5s;
+  /* 투명도만 조절하면 레이어는 그대로기 때문에 링크 클릭이 어렵다. */
+  visibility: hidden;
+}
+
+.btn19{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.btn19 label{
+  background-color: lightgrey;
+  width: 20px;
+  height: 5px;
+  display: inline-block;
+  border-radius: 15%;
+  cursor: pointer;
+  margin: 0px 2px;
+}
+
+input[id=tab1]:checked ~ .slide1,
+input[id=tab2]:checked ~ .slide2,
+input[id=tab3]:checked ~ .slide3{
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+}
+
+input[id=tab1]:checked ~ .btn19 label[for=tab1],
+input[id=tab2]:checked ~ .btn19 label[for=tab2],
+input[id=tab3]:checked ~ .btn19 label[for=tab3]{
+  background-color: crimson
+}
+
+.text1,
+.text2,
+.text3{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: crimson;
+  margin: 20px;
+  color: #Fff;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 15px;
+  box-sizing: border-box;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.text2{
+  background-color: dodgerblue;
+}
+
+.text3{
+  background-color: yellowgreen;
+}
+
+input[id=tab1]:checked ~ .heading19 .text1,
+input[id=tab2]:checked ~ .heading19 .text2,
+input[id=tab3]:checked ~ .heading19 .text3{
+  transition-delay: 0.5s;
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.text1 span,
+.text2 span,
+.text3 span{
+  font-size: 15px;
+  display: block;
+  margin-top: 5px;
+}
+
+
+/* ================================================== */
+/* Ex20_banner.html */
+
+.tab-inner20{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 300px;
+  height: 350px;
+}
+
+.tab-inner20{
+  width: 300px;
+  height: 350px;
+}
+
+input[name=tabmenu20]{
+  display: none;
+}
+
+.slide{
+  /* display: none; */
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+.slide-inner{
+  width: 900px;
+
+  /* 미세 간격 조절 */
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.btn20{
+  text-align: center;
+}
+
+.btn20 label{
+  display: inline-block;
+  width: 20px;
+  height: 5px;
+  border-radius: 15%;
+  margin: 2px;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+input[id=tab21]:checked ~ .slide .slide-inner{
+  left: 0;
+}
+
+input[id=tab22]:checked ~ .slide .slide-inner{
+  left: -300px;
+}
+
+input[id=tab23]:checked ~ .slide .slide-inner{
+  left: -600px;
+}
+
+input[id=tab21]:checked ~ .btn20 label[for=tab21],
+input[id=tab22]:checked ~ .btn20 label[for=tab22],
+input[id=tab23]:checked ~ .btn20 label[for=tab23]{
+  background-color: crimson;
+}
+
+
+/* ================================================== */
+/* Ex21_banner.html */
+
+/* ================================================== */
+/* Ex22_banner.html */
+
+
+.tab-inner22{}
+
+input[name=tabmenu22]{
+  display: none;
+}
+
+.tabs22{
+  /* 하위 요소에 앱솔이 걸렸기 때문에 조절. */
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+.item22{
+  position: absolute;
+  height: 100vh;
+  width: 300%;
+  transition: 0.5s;
+  left: 0;
+}
+.item22 div{
+  border: 1px solid blue;
+  height: 100vh;
+  float: left;
+  width: 33.33%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item22 div:nth-child(1){
+  background-color: crimson;
+}
+.item22 div:nth-child(2){
+  background-color: dodgerblue;
+}
+.item22 div:nth-child(3){
+  background-color: yellowgreen;
+}
+
+.item22 div h1{
+  font-size: 80px;
+  font-weight: normal;
+  color: #fff;
+}
+
+.btn22{
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+} 
+.btn22 label{
+  display: inline-block;
+  width: 50px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 3px;
+}
+.btn22 label[for=tab22-1]{}
+
+input[id=tab22-1]:checked ~ .tabs22 .item22{
+  left: 0;
+}
+input[id=tab22-2]:checked ~ .tabs22 .item22{
+  left: -100%;
+}
+input[id=tab22-3]:checked ~ .tabs22 .item22{
+  left: -200%;
+}
+
+input[id=tab22-1]:checked ~ .btn22 label[for=tab22-1],
+input[id=tab22-2]:checked ~ .btn22 label[for=tab22-2],
+input[id=tab22-3]:checked ~ .btn22 label[for=tab22-3]{
+  background-color: black;
+}

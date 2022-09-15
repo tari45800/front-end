@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+    /* Google Web Font */
+    @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+    
+ 
+    
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #222;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+
+
+/* ================================================== */
+/* Ex22_hover.html */
+
+.gnb23{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.gnb23 a{
+  position: relative;
+  padding-bottom: 5px;
+}
+.gnb23 a:before {
+  content: "";
+  position: absolute;
+  background-color: crimson;
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  transition: 0.5s;
+  /* right: 0; */
+  left: 50%;
+  /* transform: translateX(-50%); */
+}
+
+.gnb23 a:hover:before{
+  width: 100%;
+  /* 100%(최우측)에서 자신의 크기만큼 뺀 거리를 이동 */
+  /* left: calc(100% - 4px) */
+}
+
+/* ================================================== */
+/* Ex24_hover.html */
+/* CodingWorks Online class */
+
+.gnb24{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.gnb24 a{
+  position: relative;
+  width: 250px;
+  height: 30px;
+  overflow: hidden;
+
+}
+
+.gnb24 a::before,
+.gnb24 a::after{
+  position: absolute;
+  content: "CodingWorks Online class";
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  transition: 0.5s;
+ 
+}
+.gnb24 a::before{
+  background-color: crimson;
+  top:0;
+}
+.gnb24 a::after{
+  background-color: dodgerblue;
+  top:100%;
+}
+
+.gnb24 a:hover::before{
+  top: -100%;
+}
+
+.gnb24 a:hover::after{
+  top: 0;
+}
+
+
+/* ================================================== */
+/* Ex25_hover.html */
+
+.gnb25{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+ 
+}
+
+.gnb25 a{
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  width: 450px;
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.gnb25 a::before,
+.gnb25 a::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: 0.5s;
+}
+
+.gnb25 a:hover{
+  letter-spacing: 6px;
+}
+
+.gnb25 a:hover::before{
+  transform: rotate(45deg);
+  background-color: transparent;
+}
+
+.gnb25 a:hover::after{
+  transform: rotate(-45deg);
+  background-color: transparent;
+}
+
+
+/* ================================================== */
+/* Ex26_form.html */
+
+.custom26{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.custom26 input[id=chk26]{
+  display: none;
+}
+
+.custom26 label em{
+  border: 1px solid #000;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+
+  /* 인라인 요소끼리의 정렬 */
+  vertical-align: middle;
+  margin-right: 5px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.custom26 label em:before{
+  content: "O  V";
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background-color: dodgerblue;
+  top: 0;
+  left: 0;
+}
+
+.custom26 label[for=chk26]{
+  cursor: pointer;
+}
+
+input[id=chk26]:checked ~ label[for=chk26] em::before{
+  left: -50%;
+}
