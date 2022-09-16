@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- ================================================== -->
+
+
+  <title>탭 메뉴 콘텐츠</title>
+
+  <script src="https://kit.fontawesome.com/dca238fc5f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/style4.css">
+  <script src="../js/jquery-3.6.0.js"></script>
+  <script>
+
+    $(function(){
+
+
+      
+      $('.container2 button').click(function(){
+        
+        var age = $('.container2 input').val();
+        if(age > 19 && age < 120){
+          alert("인증이 완료되었습니다.")
+        } else if(age <= 19 && age > 0){
+          alert("성인이 아닙니다.")
+        } else {
+          alert("정확한 나이를 입력해 주세요")
+        }
+
+      })
+
+     
+
+    })
+
+  </script>
+
+
+<!-- ================================================== -->
+
+
+</head>
+<body class="body2">
+
+  <div class="container2">
+    <h1>20세 이상 성인인증 체크 제이쿼리 if 조건문</h1>
+    <input type="text" placeholder="나이를 숫자로 입력">
+    <button>성인인증</button>
+  </div>
+
+</body>
+</html>

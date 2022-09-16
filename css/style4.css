@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+    /* Google Web Font */
+    @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+    
+    @import url('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css');
+    
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #222;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+
+
+/* ================================================== */
+/* Ex01_tabMenu.html */
+
+.body1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eee;
+}
+
+
+.section-1{
+  width: 800px;
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.section-1 h1{
+  font-size: 25px;
+}
+.section-1 h1 span{
+  color: crimson;
+}
+
+.pic-1{}
+.pic-1 img{
+  width: 100px;
+  height: 100px;
+  filter: grayscale(1);
+  margin: 20px 5px;
+  transition: .5s;
+  cursor: pointer;
+}
+.pic-1 img.active{
+  border-radius: 50%;
+  filter: none;
+
+}
+
+.testimonial-1{}
+.testimonial-1 .content-1{
+  display: none;
+}
+.testimonial-1 .content-1.active{
+ display: block;
+}
+
+.testimonial-1 .content-1 p:nth-child(2){
+  font-weight: bold;
+  display: inline-block;
+  margin: 20px 0px;
+}
+
+
+/* ================================================== */
+/* Ex02_checkAge.html */
+
+.body2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container2{
+  border: 1px solid #000;
+  padding: 50px;
+  text-align: center;
+}
+
+.container2 h1{
+  margin-bottom: 30px;
+}
+
+.container2 input,
+.container2 button{
+  padding: 10px;
+  outline: none;
+}
+
+.container2 button{
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+/* ================================================== */
+/* Ex03_starRating.html */
+
+.starRating {
+  background-color: #333;
+  border-radius: 5px;
+  width: 250px;
+  text-align: center;
+  padding: 5px 5px 5px 15px;
+}
+
+.starRating div{
+  float: left;
+  width: 50%;
+}
+.stars .fa-star{
+  font-size: 18px;
+  color: #555;
+  cursor: pointer;
+}
+.print{
+  color: white;
+}
+
+.stars .active{
+  color: gold;
+  text-shadow: 0 0 5px gold;
+}

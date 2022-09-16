@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- ================================================== -->
+
+
+  <title>탭 메뉴 콘텐츠</title>
+
+  <script src="https://kit.fontawesome.com/dca238fc5f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/style4.css">
+  <script src="../js/jquery-3.6.0.js"></script>
+  <script>
+
+    $(function(){
+      $('.pic-1 img').click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+
+        $('.testimonial-1 .content-1').removeClass("active")
+        $('#'+ $(this).attr('data-alt')).addClass("active")
+      });     
+    })
+
+  </script>
+
+
+<!-- ================================================== -->
+
+
+</head>
+<body class="body1">
+
+  <div class="section-1">
+    <h1><span>CodingWorks</span>Publishing Online Class With Inflearn</h1>
+    <div class="pic-1">
+      <img class="active" src="../images/artistic-image-01.jpg" alt="" data-alt="tab1">
+      <img src="../images/artistic-image-03.jpg" alt="" data-alt="tab2">
+      <img src="../images/artistic-image-04.jpg" alt="" data-alt="tab3">
+      <img src="../images/artistic-image-05.jpg" alt="" data-alt="tab4">
+    </div>
+    <div class="testimonial-1">
+      <div class="content-1 active" id="tab1">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla porro minus omnis modi ullam doloremque. Hic facere temporibus dolorum totam, architecto culpa deserunt veritatis asperiores neque enim sapiente laborum quo dignissimos ea iusto ipsum suscipit voluptatem eaque? Saepe, explicabo nesciunt! Accusantium temporibus earum natus delectus id corporis harum quidem nisi provident voluptates eum assumenda distinctio ipsam perferendis, necessitatibus magni ipsum tenetur rerum dolor iusto corrupti rem recusandae. Iure consequatur maxime, voluptates temporibus mollitia id molestiae quam aut doloremque. Accusantium, dolore.</p>
+        <p>JeYoun Lee, Web Desginer</p>
+      </div>
+  
+      <div class="content-1" id="tab2">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium placeat accusamus, mollitia cupiditate doloremque quos voluptatum, eos sapiente, sed architecto earum maxime? Quisquam debitis ea voluptatibus unde molestias fugiat nihil consequuntur, mollitia repellat, itaque cum vitae assumenda doloribus? Temporibus natus magni, ducimus ipsa adipisci quia laborum architecto necessitatibus qui ipsam placeat mollitia culpa eum unde? Inventore optio similique nostrum quidem aperiam voluptates ex animi, esse, qui voluptate cum nesciunt quod deleniti laboriosam illo sunt voluptatibus corrupti ullam reiciendis maxime nam!</p>
+        <p>JeYoun Lee, Web Desginer</p>
+      </div>
+  
+      <div class="content-1" id="tab3">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non eveniet soluta aliquid. Similique reprehenderit ratione pariatur porro autem, facere maxime ut aspernatur voluptates molestiae perferendis ad quisquam natus quod consectetur recusandae labore modi, consequatur magnam. Esse voluptatem dolorum molestias sit, praesentium maiores iusto aspernatur quibusdam aliquam, ducimus possimus quos blanditiis iste quas hic quia porro laboriosam ea. Mollitia atque, architecto pariatur maxime reiciendis quod repudiandae. Ad impedit alias magni eveniet repudiandae natus libero, placeat expedita, a obcaecati quibusdam nesciunt porro.</p>
+        <p>JeYoun Lee, Web Desginer</p>
+      </div>
+  
+      <div class="content-1" id="tab4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore deserunt nisi mollitia cumque sit saepe autem velit quis recusandae dolore officiis vel atque, blanditiis distinctio obcaecati culpa voluptatibus adipisci iure, laboriosam repellendus. Iure nesciunt eaque cumque aperiam illo eligendi soluta quaerat doloremque perspiciatis consectetur odio, dolores numquam aspernatur hic blanditiis neque. Nisi sequi provident minus deserunt ipsum sunt officia corrupti, suscipit, quidem, veniam aut cupiditate ducimus voluptate. Labore reiciendis, tenetur hic eligendi tempora accusamus sed expedita veniam voluptate odit beatae.</p>
+        <p>JeYoun Lee, Web Desginer</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
