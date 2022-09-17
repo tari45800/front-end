@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- ================================================== -->
+
+
+  <title>탭 메뉴 콘텐츠</title>
+
+  <script src="https://kit.fontawesome.com/dca238fc5f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/style4.css">
+  <script src="../js/jquery-3.6.0.js"></script>
+  <script>
+
+    $(function(){
+      $('.size span').click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      })
+
+      $('.colors span').click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      })
+
+      $('.like').click(function(){
+        $(this).toggleClass("active");
+      })
+    })
+
+  </script>
+
+
+<!-- ================================================== -->
+
+
+</head>
+<body class="body2" style="background-color: #ddd;">
+
+  <div class="item06">
+    <img src="../images/model-female.png" alt="">
+    <div class="detail">
+
+      <div class="title06">
+        <h2>Nightgown <em>Women's Designer Wear</em></h2>
+        <span>$55.99</span>
+      </div>
+
+      <div class="info06">
+        <div class="size">
+          <h2>Size</h2>
+          <span>XS</span>
+          <span>S</span>
+          <span>M</span>
+          <span>L</span>
+          <span>XL</span>
+        </div>
+        <div class="colors">
+          <h2>Colors</h2>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span class="like"></span>
+      </div>
+      <button class="add">Add to Cart</button>
+
+    </div>
+  </div>
+
+</body>
+</html>

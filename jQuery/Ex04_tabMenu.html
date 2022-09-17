@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- ================================================== -->
+
+
+  <title>탭 메뉴 콘텐츠</title>
+
+  <script src="https://kit.fontawesome.com/dca238fc5f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/style4.css">
+  <script src="../js/jquery-3.6.0.js"></script>
+  <script>
+
+    $(function(){
+      $('.btn-04 li').click(function(){
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+
+        var num = $(this).index();
+
+        $('.tabs div').eq(num).addClass('active');
+        $('.tabs div').eq(num).siblings().removeClass('active');
+      })
+    })
+
+  </script>
+
+
+<!-- ================================================== -->
+
+
+</head>
+<body class="body2" style="background: #eee;">
+
+  <section>
+
+    <h1>코딩웍스, 프론트엔드 퍼블리셔 취업을 위한 실전 퍼블리싱 강좌</h1>
+
+    <input type="text" placeholder="What are you looking for?">
+
+  <div class="container04">
+    <ul class="btn-04">
+      <li class="active">HTML5</li>
+      <li>CSS</li>
+      <li>JQUERY</li>
+      <li>JAVA</li>
+      <li>CSS FRAMEWORKS</li>
+    </ul>
+
+    <div class="tabs">
+      <div class="tab1 active">
+        <h2>HTML5</h2>
+        <img src="../images/artistic-image-01.jpg" alt="">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, nihil aperiam. Consectetur illo blanditiis accusantium voluptate iste dolorem quam omnis nulla hic amet! Ipsum odio, quo alias eos, quaerat recusandae dicta doloremque beatae, pariatur sint earum quas. Et magnam id dolore consequatur ratione ipsum? Suscipit neque deleniti soluta aspernatur laboriosam asperiores placeat, reprehenderit reiciendis nesciunt et amet eligendi quasi facilis, explicabo, est sint? Error tempora corporis sed soluta doloribus veniam nulla placeat est. Nisi, maxime minus dolores architecto molestias asperiores amet magni odit doloremque quaerat ea. Reprehenderit totam iste amet? Sint quisquam placeat illo molestias porro odit eius, vitae rerum!</p>
+      </div>
+      <div class="tab2">
+        <h2>CSS</h2>
+        <img src="../images/artistic-image-02.jpg" alt="">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, nihil aperiam. Consectetur illo blanditiis accusantium voluptate iste dolorem quam omnis nulla hic amet! Ipsum odio, quo alias eos, quaerat recusandae dicta doloremque beatae, pariatur sint earum quas. Et magnam id dolore consequatur ratione ipsum? Suscipit neque deleniti soluta aspernatur laboriosam asperiores placeat, reprehenderit reiciendis nesciunt et amet eligendi quasi facilis, explicabo, est sint? Error tempora corporis sed soluta doloribus veniam nulla placeat est. Nisi, maxime minus dolores architecto molestias asperiores amet magni odit doloremque quaerat ea. Reprehenderit totam iste amet? Sint quisquam placeat illo molestias porro odit eius, vitae rerum!</p>
+      </div>
+      <div class="tab3">
+        <h2>JQUERY</h2>
+        <img src="../images/artistic-image-03.jpg" alt="">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, nihil aperiam. Consectetur illo blanditiis accusantium voluptate iste dolorem quam omnis nulla hic amet! Ipsum odio, quo alias eos, quaerat recusandae dicta doloremque beatae, pariatur sint earum quas. Et magnam id dolore consequatur ratione ipsum? Suscipit neque deleniti soluta aspernatur laboriosam asperiores placeat, reprehenderit reiciendis nesciunt et amet eligendi quasi facilis, explicabo, est sint? Error tempora corporis sed soluta doloribus veniam nulla placeat est. Nisi, maxime minus dolores architecto molestias asperiores amet magni odit doloremque quaerat ea. Reprehenderit totam iste amet? Sint quisquam placeat illo molestias porro odit eius, vitae rerum!</p>
+      </div>
+      <div class="tab4">
+        <h2>JAVA</h2>
+        <img src="../images/artistic-image-04.jpg" alt="">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, nihil aperiam. Consectetur illo blanditiis accusantium voluptate iste dolorem quam omnis nulla hic amet! Ipsum odio, quo alias eos, quaerat recusandae dicta doloremque beatae, pariatur sint earum quas. Et magnam id dolore consequatur ratione ipsum? Suscipit neque deleniti soluta aspernatur laboriosam asperiores placeat, reprehenderit reiciendis nesciunt et amet eligendi quasi facilis, explicabo, est sint? Error tempora corporis sed soluta doloribus veniam nulla placeat est. Nisi, maxime minus dolores architecto molestias asperiores amet magni odit doloremque quaerat ea. Reprehenderit totam iste amet? Sint quisquam placeat illo molestias porro odit eius, vitae rerum!</p>
+      </div>
+      <div class="tab5">
+        <h2>CSS FRAMEWORKS</h2>
+        <img src="../images/artistic-image-05.jpg" alt="">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, nihil aperiam. Consectetur illo blanditiis accusantium voluptate iste dolorem quam omnis nulla hic amet! Ipsum odio, quo alias eos, quaerat recusandae dicta doloremque beatae, pariatur sint earum quas. Et magnam id dolore consequatur ratione ipsum? Suscipit neque deleniti soluta aspernatur laboriosam asperiores placeat, reprehenderit reiciendis nesciunt et amet eligendi quasi facilis, explicabo, est sint? Error tempora corporis sed soluta doloribus veniam nulla placeat est. Nisi, maxime minus dolores architecto molestias asperiores amet magni odit doloremque quaerat ea. Reprehenderit totam iste amet? Sint quisquam placeat illo molestias porro odit eius, vitae rerum!</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+</body>
+</html>

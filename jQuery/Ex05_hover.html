@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- ================================================== -->
+
+
+  <title>탭 메뉴 콘텐츠</title>
+
+  <script src="https://kit.fontawesome.com/dca238fc5f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/style4.css">
+  <script src="../js/jquery-3.6.0.js"></script>
+  <script>
+
+    $(function(){
+      $('.navi li a').mouseover(function(){
+        var img = $(this).attr('data-img');
+
+        $('.photo').css({
+          "background-image": 'url('+img+')'
+        })
+
+      })
+    })
+
+  </script>
+
+
+<!-- ================================================== -->
+
+
+</head>
+<body class="body2" >
+
+  <div class="container05">
+    <ul class="navi">
+      <li><a href="#" data-text="ABOUT" data-img="../images/img1.jpg">ABOUT</a></li>
+      <li><a href="#" data-text="INSTRUCTOR" data-img="../images/img2.jpg">INSTRUCTOR</a></li>
+      <li><a href="#" data-text="CLASS" data-img="../images/img3.jpg">CLASS</a></li>
+      <li><a href="#" data-text="LOCATION" data-img="../images/img1.jpg">LOCATION</a></li>
+    </ul>
+    <div class="photo"></div>
+  </div>
+
+</body>
+</html>
